@@ -1,0 +1,61 @@
+--------------------------------------------------------
+    Servicio Clientes v1
+--------------------------------------------------------
+
+Server URL: "http://localhost:8080/servicios/clientes/v1"
+
+Método alta:
+    url: /alta
+    Descripción: ..................
+    Parámetros de entrada: 
+            Método: POST
+            String nombre
+            String apellido
+            String estadoCivil     SOLTERO, CASADO, VIUDO, DIVORCIADO
+            String cuit
+            String direccion
+            String telefono
+            String email
+            String comentarios
+    Párametro de salida: int id     Id generado por la base. 
+
+Método baja:
+    url: /baja
+    Parámetro de entrada:
+            Método: POST
+            int id
+    Parámetro de salida: boolean true/false
+
+Método all
+    url: /all
+    Parámetro de entrada:
+            Método: GET
+    Parámetro de salida: List<Cliente> en JSON
+
+Método likeApellido
+    url: /likeApellido
+    Parámetro de entrada: 
+            Método: GET
+            String apellido
+    Parámetro de salida: List<Cliente> en JSON  
+
+Método likeCuit
+    url: /likeCuit
+    Parámetro de entrada: 
+            Método: GET
+            String cuit
+    Parámetro de salida: List<Cliente> en JSON
+
+Método byId
+    url: /byId
+    Parámetro de entrada: 
+            Método: GET
+            int id
+    Parámetro de salida: Cliente en JSON
+
+Método byCuit
+    url: /byCuit
+    Parámetro de entrada: 
+            Método: GET
+            String cuit
+    Parámetro de salida: Cliente en JSON
